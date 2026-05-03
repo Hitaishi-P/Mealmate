@@ -1,3 +1,6 @@
+// Form where users set their meal plan preferences — diet type, number of people,
+// how many days, cuisine style, and daily calorie target.
+// Calls onSubmit() with the collected preferences when the user clicks Generate.
 import { useState } from 'react'
 
 const DIETS = [

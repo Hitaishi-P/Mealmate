@@ -1,6 +1,7 @@
 const BASE = 'https://api.spoonacular.com'
 const KEY = import.meta.env.VITE_SPOONACULAR_KEY
-
+// Utility functions for talking to the Spoonacular API.
+// getMealPlan() generates a weekly plan based on user preferences,
 export async function getMealPlan({ diet, targetCalories }) {
   const params = new URLSearchParams({
     apiKey: KEY,

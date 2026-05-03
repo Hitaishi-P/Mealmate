@@ -1,4 +1,7 @@
 import MealCard from './MealCard'
+// Renders the weekly meal plan as a responsive grid, one column per day.
+// Each cell shows breakfast, lunch, and dinner as MealCard components.
+// Also displays the average daily calorie count pulled from Spoonacular's nutrient data.
 
 const ALL_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 const DAY_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

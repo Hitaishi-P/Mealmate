@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# 🍽️ MealMate — AI-Powered Meal Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered weekly meal planner and grocery list builder built with React + Vite.
 
-Currently, two official plugins are available:
+## Video Demo
+https://youtu.be/KFwTVsF-jbI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
+MealMate generates a personalized weekly meal plan based on your dietary preferences
+using the Spoonacular API. It builds a smart grocery list, shows full recipe details,
+and uses the Anthropic Claude API for ingredient substitution suggestions.
 
-## React Compiler
+## Technologies
+- React 18 + TypeScript + Vite
+- Tailwind CSS v4
+- Spoonacular API (meal plans + recipes)
+- Anthropic Claude API (AI features)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup
 
-## Expanding the ESLint configuration
+### 1. Clone and install
+git clone https://git.cs.vt.edu/hitaishi/mealmate.git
+cd mealmate
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Add API keys
+Copy .env.example to .env and fill in your keys:
+VITE_SPOONACULAR_KEY=your_key_here
+VITE_ANTHROPIC_KEY=your_key_here  (optional — needed for AI features only)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Get a free Spoonacular key at: https://spoonacular.com/food-api
+Get a Claude key at: https://console.anthropic.com
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 3. Run
+npm run dev
+Open http://localhost:5173
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Structure
+src/
+├── components/   UI components
+├── hooks/        Custom React hooks
+├── utils/        API and data utilities
+├── App.tsx       Root component
+└── index.css     Global styles + Tailwind config
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Author
+Hitaishi Posanpeta

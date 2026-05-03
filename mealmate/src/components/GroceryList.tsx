@@ -1,3 +1,6 @@
+// Displays the deduplicated grocery list generated from the meal plan.
+// Grouped by aisle, searchable, and each item can be checked off while shopping.
+// Shows a progress bar so you can see how much of the list you've gotten through.
 import { useState, useMemo } from 'react'
 import { formatAmount } from '../utils/groceryParser'
 

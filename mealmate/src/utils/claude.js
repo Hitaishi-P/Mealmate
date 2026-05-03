@@ -1,5 +1,7 @@
-// All requests go through the Vite dev proxy (/api/anthropic → api.anthropic.com).
-// The proxy injects x-api-key server-side — your key is never in the browser bundle.
+// Handles all communication with the Anthropic Claude API.
+// getSubstitution() suggests ingredient swaps for a specific ingredient,
+// and chatWithAssistant() powers the AI chat panel with full conversation history.
+// Claude key is optional — AI features just won't work without it.
 const CLAUDE_URL = '/api/anthropic/v1/messages'
 
 /**

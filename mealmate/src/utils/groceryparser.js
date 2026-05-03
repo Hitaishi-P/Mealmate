@@ -1,4 +1,7 @@
 // Unit normalization map — converts common units to a base form
+// Takes the raw Spoonacular meal plan and extracts a clean grocery list.
+// Deduplicates ingredients by name + unit, normalizes unit names (e.g. "tablespoons" → "tbsp"),
+// multiplies amounts by servings, and sorts everything by aisle for logical shopping order.
 const UNIT_NORMALIZE = {
   tablespoon: 'tbsp', tablespoons: 'tbsp', Tablespoon: 'tbsp', Tablespoons: 'tbsp',
   teaspoon: 'tsp', teaspoons: 'tsp', Teaspoon: 'tsp', Teaspoons: 'tsp',

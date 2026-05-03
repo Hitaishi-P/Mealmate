@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { getRecipeById } from '../utils/spoonacular'
 import { getSubstitution } from '../utils/claude'
 
+// A single meal tile in the calendar. Clicking it fetches and shows the full
+// recipe in a modal — image, ingredients, instructions, and a "Sub?" button
+// on each ingredient that calls Claude to suggest substitutions.
+
 const MEAL_TYPE_COLORS = {
   breakfast: 'bg-cream-200 text-clay-700',
   lunch: 'bg-sage-100 text-sage-700',

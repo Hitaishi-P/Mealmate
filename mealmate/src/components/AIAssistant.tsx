@@ -1,3 +1,6 @@
+// Chat panel powered by Claude. Keeps the full conversation history
+// so Claude has context across multiple messages. Includes quick suggestion
+// buttons so users have somewhere to start if they're not sure what to ask.
 import { useState, useRef, useEffect } from 'react'
 import { chatWithAssistant } from '../utils/claude'
 
